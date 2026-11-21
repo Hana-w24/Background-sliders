@@ -42,4 +42,7 @@ sliderB.oninput = function() {
 
 function updateBackground() {
   document.body.style.backgroundColor = `rgb(${RED}, ${GREEN}, ${BLUE})`;
+  document.body.style.color = `rgb(${180 - RED}, ${180 - GREEN}, ${180 - BLUE})`;
 }
+
+
