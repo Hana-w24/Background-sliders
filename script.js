@@ -1,37 +1,42 @@
-var sliderR = document.getElementById("myRangeR");
-var outputR = document.getElementById("demoR");
+const sliderR = document.getElementById("myRangeR");
+const outputR = document.getElementById("demoR");
 
-var sliderG = document.getElementById("myRangeG");
-var outputG = document.getElementById("demoG");
+const sliderG = document.getElementById("myRangeG");
+const outputG = document.getElementById("demoG");
 
-var sliderB = document.getElementById("myRangeB");
-var outputB = document.getElementById("demoB");
+const sliderB = document.getElementById("myRangeB");
+const outputB = document.getElementById("demoB");
 
-outputR.innerHTML = sliderR.value;
+let RED = 255
+let GREEN = 255
+let BLUE = 255
 
-outputG.innerHTML = sliderG.value;
+sliderR.value = RED
+sliderG.value = GREEN
+sliderB.value = BLUE
 
-outputB.innerHTML = sliderB.value;
+outputR.innerHTML = RED;
+outputG.innerHTML = GREEN;
+outputB.innerHTML = BLUE;
 
-let RED = 128
-let GREEN = 128
-let BLUE = 128
+updateBackground()
 
-sliderR.oninput  = function() {
-    outputR.innerHTML = this.valueR;
-    this.valueR = RED;
-    updateBackground()
+
+sliderR.oninput = function() {
+    RED = this.value;
+    outputR.innerHTML = RED;
+    updateBackground();
 }
 
-sliderG.oninput  = function() {
-    outputG.innerHTML = this.valueG;
-    this.valueG = GREEN;
-    updateBackground()
+sliderG.oninput = function() {
+    GREEN = this.value;
+    outputG.innerHTML = GREEN;
+    updateBackground();
 }
 
-sliderB.oninput  = function() {
-    outputB.innerHTML = this.valueB;
-    this.valueB = BLUE;
+sliderB.oninput = function() {
+    BLUE = this.value;
+    outputB.innerHTML = BLUE;
     updateBackground()
 }
 
